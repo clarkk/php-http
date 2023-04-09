@@ -3,7 +3,7 @@
 namespace Http;
 
 class Headers {
-	public function last_modified(){
+	static public function last_modified(){
 		$gmt_mtime = gmdate('r', filemtime($_SERVER['SCRIPT_FILENAME']));
 		header('Last-Modified: '.$gmt_mtime);
 		header('Cache-Control: public');
